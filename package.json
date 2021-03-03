@@ -1,0 +1,23 @@
+{
+  "name": "strategicfinancial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/server.js",
+    "dbReset": "node ./dbReset.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18",
+    "path": "^0.12.7"
+  }
+}
