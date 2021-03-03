@@ -71,9 +71,7 @@ creditorController.updateEntry = (req, res, next) => {
     { ...req.body },
     { new: true, upsert: true },
     (err, entry) => {
-      console.log(entry);
       if (err) {
-        // send back to login
         return next(err);
       }
 
@@ -82,17 +80,5 @@ creditorController.updateEntry = (req, res, next) => {
     }
   );
 };
-
-// creditorController.findOne = (req, res, next) => {
-//   Creditor.findOne({ username: req.body.username }, (err, user) => {
-//     // console.log(`user ${user['_id']}`);
-//     if (err) {
-//       // send back to login
-//       return next(err);
-//     }
-
-//     if (!user) return res.json(false);
-//   });
-// };
 
 module.exports = creditorController;

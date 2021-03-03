@@ -6,6 +6,7 @@ mongoose.connect(
   'mongodb+srv://SFUser:SFPassword@cluster0.sllcc.mongodb.net/cluster0?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
+
 let testData;
 
 // fetches test data, calls resetData once data received
@@ -19,7 +20,7 @@ fetch(
 // clears any changes from the test database by erasing all data then inputs entries from data.json file into db
 async function resetData() {
   await clearDatabase();
-  testData.forEach(async (entry) => {
+  testData.forEach((entry) => {
     createEntry(entry);
   });
   console.log('Database has been reset');
